@@ -41,9 +41,6 @@ Plugin 'maralla/completor.vim'
 Plugin 'tomasr/molokai'
 Plugin 'dracula/vim'
 
-"Plugin 'lu-ren/SerialExperimentsLain'
-"Plugin 'ianremmler/frood'
-
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
