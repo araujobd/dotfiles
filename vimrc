@@ -24,11 +24,11 @@ Plugin 'easymotion/vim-easymotion'
 Plugin 'sudar/vim-arduino-syntax'
 Plugin 'martinda/Jenkinsfile-vim-syntax'
 Plugin 'maralla/completor.vim'
+Plugin 'udalov/kotlin-vim'
 "
 "Plugin 'kien/ctrlp.vim'
 "Plugin 'sirver/ultisnips'
 "Plugin 'valloric/youcompleteme'
-"Plugin 'udalov/kotlin-vim'
 "Plugin 'cohama/lexima.vim'
 "Plugin 'mattn/emmet-vim'
 "Plugin 'scrooloose/syntastic'
@@ -38,8 +38,11 @@ Plugin 'maralla/completor.vim'
 "Plugin 'airblade/vim-gitgutter'
 
 " Color schemes
+Plugin 'ArthurGorgonio/vim-themes-improved'
 Plugin 'tomasr/molokai'
-Plugin 'dracula/vim'
+Plugin 'MidnaPeach/neonwave.vim'
+Plugin 'gkjgh/cobalt'
+Plugin 'vim-scripts/grishin-color-scheme'
 
 
 " All of your Plugins must be added before the following line
@@ -147,7 +150,7 @@ set t_Co=256
 set undolevels=1000
 set visualbell
 
-colorscheme molokai
+colorscheme calm-theme
 
 nnoremap <Tab> :bnext<CR>
 nnoremap <S-Tab> :bprevious<CR>

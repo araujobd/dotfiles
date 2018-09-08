@@ -100,6 +100,8 @@ POWERLEVEL9K_VI_MODE_NORMAL_FOREGROUND=202
 plugins=(
   git
   vi-mode
+  zsh-syntax-highlighting
+  zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -118,6 +120,10 @@ else
   export EDITOR='vim'
 fi
 
+if [ -f ~/.zsh_aliases ]; then
+  . ~/.zsh_aliases
+fi
+
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
@@ -132,3 +138,7 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/bruno/.sdkman"
+[[ -s "/home/bruno/.sdkman/bin/sdkman-init.sh" ]] && source "/home/bruno/.sdkman/bin/sdkman-init.sh"
