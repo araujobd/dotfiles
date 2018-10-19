@@ -11,7 +11,7 @@ TERM=xterm-256color
 
 ZSH_THEME="powerlevel9k/powerlevel9k"
 POWERLEVEL9K_MODE="nerdfont-complete"
- 
+
 zsh_docker() {
   systemctl status docker > /dev/null
   if [[ $? -eq 0 ]] ;then
@@ -148,9 +148,8 @@ COMPLETION_WAITING_DOTS="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  #vi-mode
-  zsh-syntax-highlighting
   zsh-autosuggestions
+  zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh

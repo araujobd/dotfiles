@@ -1,5 +1,32 @@
-"""" git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+" Some configurations copied from https://https://github.com/ArthurGorgonio/Dotfiles/blob/master/vimrc
+" bdantas47@hotmail.com, copy in: 2018 Oct 19
 
+""""""""""""""""""""""""""""""""""""""""
+"        Vim Configuration File        "
+"     Maintainer: Bruno Dantas         "
+"       Last Change: 2018 Oct 19       "
+""""""""""""""""""""""""""""""""""""""""
+
+""" COLORS CODE
+" I choose these colors to customize the rainbow parentheses plugin. These
+" colors are ordened by xterm code. The follow lines represent a list of the
+" colors than I use.
+" Code color in xterm - the name of the color - the code in rgb
+" 000 -   Black    - #000000
+" 009 -    Red     - #FF0000
+" 010 -   Green    - #00FF00
+" 011 -   Yellow   - #FFFF00
+" 013 -  Fuchsia   - #FF00FF
+" 014 -    Aqua    - #00FFFF
+" 022 - DarkGreen  - #005F00
+" 202 - OrangeRed1 - #FF5F00
+
+" The follow links were used to choose the colors and the icon in the configuration
+" color: https://jonasjacek.github.io/colors/
+
+
+""" TO CLONE VUNDLE
+" git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 set nocompatible 	" be iMproved, required
 filetype off		" required
@@ -10,21 +37,24 @@ call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 " let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim' "Plugin Manager
 
-" Plugins
+""""""""""""""""""""""""""""""""""""""""
+"               Plugins                "
+""""""""""""""""""""""""""""""""""""""""
+
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/nerdtree'
 Plugin 'majutsushi/tagbar'
-Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
-Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'easymotion/vim-easymotion'
-Plugin 'sudar/vim-arduino-syntax'
-Plugin 'martinda/Jenkinsfile-vim-syntax'
-Plugin 'maralla/completor.vim'
-Plugin 'udalov/kotlin-vim'
+
+Plugin 'luochen1990/rainbow'
+Plugin 'tpope/vim-fugitive'
+"Plugin 'martinda/Jenkinsfile-vim-syntax'
+"Plugin 'sudar/vim-arduino-syntax'
+"Plugin 'udalov/kotlin-vim'
 "
 "Plugin 'kien/ctrlp.vim'
 "Plugin 'sirver/ultisnips'
@@ -40,90 +70,78 @@ Plugin 'udalov/kotlin-vim'
 " Color schemes
 Plugin 'ArthurGorgonio/vim-themes-improved'
 Plugin 'tomasr/molokai'
-Plugin 'MidnaPeach/neonwave.vim'
-Plugin 'gkjgh/cobalt'
-Plugin 'vim-scripts/grishin-color-scheme'
 
+""""""""""""""""""""""""""""""""""""""""
+"             End Plugins              "
+""""""""""""""""""""""""""""""""""""""""
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-
-" plugins
-
+""""""""""""""""""""""""""""""""""""""""
+"        Plugins Configurations        "
+""""""""""""""""""""""""""""""""""""""""
 
 " Rainbow Parenteses
-"let g:rbpt_colorpairs=[
-"    \ ['brown',       'RoyalBlue3'],
-"    \ ['Darkblue',    'SeaGreen3'],
-"    \ ['darkgray',    'DarkOrchid3'],
-"    \ ['darkgreen',   'firebrick3'],
-"    \ ['darkcyan',    'RoyalBlue3'],
-"    \ ['darkred',     'SeaGreen3'],
-"    \ ['darkmagenta', 'DarkOrchid3'],
-"    \ ['brown',       'firebrick3'],
-"    \ ['gray',        'RoyalBlue3'],
-"    \ ['black',       'SeaGreen3'],
-"    \ ['darkmagenta', 'DarkOrchid3'],
-"    \ ['Darkblue',    'firebrick3'],
-"    \ ['darkgreen',   'RoyalBlue3'],
-"    \ ['darkcyan',    'SeaGreen3'],
-"    \ ['darkred',     'DarkOrchid3'],
-"    \ ['red',         'firebrick3'],
-"    \ ]
-
-let g:rbpt_colorpairs=[
-    \ ['brown',       'RoyalBlue3'],
-    \ ['Darkblue',    'SeaGreen3'],
-    \ ['darkgray',    'DarkOrchid3'],
-    \ ['darkgreen',   'firebrick3'],
-    \ ['darkcyan',    'RoyalBlue3'],
-    \ ['190',     'SeaGreen3'],
-    \ ['255', 'DarkOrchid3'],
-    \ ['077',       'firebrick3'],
-    \ ['013',        'RoyalBlue3'],
-    \ ['033',       'SeaGreen3'],
-    \ ['153', 'DarkOrchid3'],
-    \ ['199',    'firebrick3'],
-    \ ['046',   'RoyalBlue3'],
-    \ ['226',    'SeaGreen3'],
-    \ ['196',     'DarkOrchid3'],
-    \ ['045',         'firebrick3'],
-    \ ]
-
-let g:rbpt_max=16
-let g:rbpt_loadcmd_toggle=0
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
-
+"'parentheses': ['start=/(/ end=/)/ fold'
+" the word fold indicates that (), [], and {} are colored individually by the
+"   sectioned sequence
+let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
+let g:rainbow_conf = {
+      \   'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
+      \   'ctermfgs': [9, 10, 11, 12, 13, 14, 22, 202],
+      \   'operators': '_,_',
+      \   'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold',
+      \       'start=/{/ end=/}/ fold'],
+      \   'separately': {
+      \     '*': {},
+      \     'tex': {
+      \       'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/',
+      \           'start=/\{\ end=/\}\ '],
+      \     },
+      \     'lisp': {
+      \       'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick',
+      \           'darkorchid3'],
+      \     },
+      \     'vim': {
+      \       'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/',
+      \           'start=/{/ end=/}/ fold',
+      \           'start=/(/ end=/)/ containedin=vimFuncBody',
+      \           'start=/\[/ end=/\]/ containedin=vimFuncBody',
+      \           'start=/{/ end=/}/ fold containedin=vimFuncBody'],
+      \     },
+      \  }
+      \}
 
 " Airline
 let g:airline#extensions#tabline#enabled=1
-"let g:airline#extensions#tabline#left_sep = ' '
-"let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline_powerline_fonts=1
 let g:airline_theme='wombat'
-"let g:airline_symbols
-
-
-" Molokai
-let g:molokai_original=1
-let g:rehash256=1
-
 
 " NerdTree Configuration
 " Give a shortcut key to NERD Tree
 map <F2> :NERDTreeToggle<CR>
 let g:NERDTreeChDirMode=2
 
+" Tagbar
 nmap <F8> :TagbarToggle<CR>
+let g:tagbar_left=1
+let g:tagbar_autofocus=1
+let g:tagbar_autoclose=1
+
+" Molokai
+let g:molokai_original=1
+let g:rehash256=1
+
+""""""""""""""""""""""""""""""""""""""""
+"      End Plugins Configurations      "
+""""""""""""""""""""""""""""""""""""""""
 
 
 syntax on
 
+" Basic configuration
 set autoindent
 set colorcolumn=80
 set cursorline
@@ -150,7 +168,11 @@ set t_Co=256
 set undolevels=1000
 set visualbell
 
+set pastetoggle=<F12> " sane identation on pastes
+
+" Setting color scheme
 colorscheme calm-theme
 
+" Remaping commands
 nnoremap <Tab> :bnext<CR>
 nnoremap <S-Tab> :bprevious<CR>
