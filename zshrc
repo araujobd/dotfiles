@@ -17,7 +17,7 @@ zsh_docker() {
   if [[ $? -eq 0 ]] ;then
     echo -en "%F{006%} \uF308"
   else
-    echo -en "%F{010%} \uF312"
+    echo -en "%F{010%}\uF31A"
   fi
 }
 
