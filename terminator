@@ -1,6 +1,6 @@
 [global_config]
   enabled_plugins = InactivityWatch, CustomCommandsMenu, TestPlugin, ActivityWatch, TerminalShot, LaunchpadCodeURLHandler, APTURLHandler, Logger, LaunchpadBugURLHandler
-  inactive_color_offset = 0.415730337080
+  inactive_color_offset = 0.696629213483
   title_font = SpaceMono Nerd Font Mono 6
   title_use_system_font = False
 [keybindings]
