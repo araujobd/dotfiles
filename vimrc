@@ -54,6 +54,7 @@ Plugin 'luochen1990/rainbow'
 Plugin 'tpope/vim-fugitive'
 "
 Plugin 'justinmk/vim-syntax-extra'
+Plugin 'JamshedVesuna/vim-markdown-preview'
 "Plugin 'martinda/Jenkinsfile-vim-syntax'
 "Plugin 'sudar/vim-arduino-syntax'
 "Plugin 'udalov/kotlin-vim'

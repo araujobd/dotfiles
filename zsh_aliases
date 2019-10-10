@@ -1,3 +1,7 @@
 alias start_docker="sudo systemctl start docker"
 alias stop_docker="sudo systemctl stop docker"
 alias reset_swap="sudo swapoff -a && sudo swapon -a"
+alias ls='ls --color --group-directories-first'
+alias ll='ls -l'
+alias lt='tree -L 1'
+

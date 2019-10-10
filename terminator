@@ -1,9 +1,24 @@
 [global_config]
-  enabled_plugins = InactivityWatch, CustomCommandsMenu, TestPlugin, ActivityWatch, TerminalShot, LaunchpadCodeURLHandler, APTURLHandler, Logger, LaunchpadBugURLHandler
   inactive_color_offset = 0.696629213483
-  title_font = SpaceMono Nerd Font Mono 6
+  enabled_plugins = InactivityWatch, CustomCommandsMenu, TestPlugin, ActivityWatch, TerminalShot, LaunchpadCodeURLHandler, APTURLHandler, Logger, LaunchpadBugURLHandler
+  suppress_multiple_term_dialog = True
   title_use_system_font = False
+  title_font = SauceCodePro Nerd Font Mono 6
 [keybindings]
+[profiles]
+  [[default]]
+    allow_bold = False
+    background_color = "#080808"
+    background_darkness = 0.98
+    background_type = transparent
+    cursor_color = "#aaaaaa"
+    font = SauceCodePro Nerd Font Mono 10
+    foreground_color = "#0acb60"
+    show_titlebar = False
+    scrollbar_position = hidden
+    scroll_on_output = True
+    palette = "#000000:#cd0000:#00cd00:#cdcd00:#0000cd:#cd00cd:#00cdcd:#faebd7:#404040:#ff0000:#00ff00:#ffff00:#ce5c00:#ff00ff:#00ffff:#ffffff"
+    use_system_font = False
 [layouts]
   [[default]]
     [[[child0]]]
@@ -24,17 +39,3 @@
       type = Terminal
       uuid = 58e4aacb-034c-44d3-a51c-75a277d42b9c
 [plugins]
-[profiles]
-  [[default]]
-    allow_bold = False
-    background_color = "#080808"
-    background_darkness = 0.98
-    background_type = transparent
-    cursor_color = "#aaaaaa"
-    font = SpaceMono Nerd Font Mono 9
-    foreground_color = "#0acb60"
-    palette = "#000000:#cd0000:#00cd00:#cdcd00:#0000cd:#cd00cd:#00cdcd:#faebd7:#404040:#ff0000:#00ff00:#ffff00:#ce5c00:#ff00ff:#00ffff:#ffffff"
-    scroll_on_output = True
-    scrollbar_position = hidden
-    show_titlebar = False
-    use_system_font = False

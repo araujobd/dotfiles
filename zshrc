@@ -40,7 +40,8 @@ POWERLEVEL9K_LEFT_SEGMENT_SEPARATOR="\uE0BC"
 POWERLEVEL9K_RIGHT_SEGMENT_SEPARATOR="\uE0BE"
 
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(custom_docker battery dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(music time background_jobs ssh dir_writable)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(virtualenv time background_jobs ssh dir_writable)
+# POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(music time background_jobs ssh dir_writable)
 
 POWERLEVEL9K_OS_ICON_BACKGROUND=000
 POWERLEVEL9K_OS_ICON_FOREGROUND=040
@@ -189,6 +190,7 @@ fi
 
 export $(gnome-keyring-daemon --daemonize --start)
 
+source ~/.zprofile
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/bruno/.sdkman"
 [[ -s "/home/bruno/.sdkman/bin/sdkman-init.sh" ]] && source "/home/bruno/.sdkman/bin/sdkman-init.sh"
