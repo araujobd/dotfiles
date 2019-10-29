@@ -9,7 +9,7 @@
   [[default]]
     allow_bold = False
     background_color = "#080808"
-    background_darkness = 0.98
+    background_darkness = 0.97
     background_type = transparent
     cursor_color = "#aaaaaa"
     font = SauceCodePro Nerd Font Mono 10
