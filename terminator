@@ -1,23 +1,37 @@
 [global_config]
   inactive_color_offset = 0.696629213483
-  enabled_plugins = InactivityWatch, CustomCommandsMenu, TestPlugin, ActivityWatch, TerminalShot, LaunchpadCodeURLHandler, APTURLHandler, Logger, LaunchpadBugURLHandler
+  enabled_plugins = TestPlugin, ActivityWatch, InactivityWatch, Logger, LaunchpadBugURLHandler, LaunchpadCodeURLHandler, APTURLHandler, CustomCommandsMenu, TerminalShot, TerminatorThemes
   suppress_multiple_term_dialog = True
   title_use_system_font = False
-  title_font = SauceCodePro Nerd Font Mono 6
+  title_font = SpaceMono Nerd Font Mono Bold 6
 [keybindings]
 [profiles]
   [[default]]
     allow_bold = False
-    background_color = "#080808"
-    background_darkness = 0.97
+    background_color = "#202027"
+    background_darkness = 0.99
     background_type = transparent
     cursor_color = "#aaaaaa"
-    font = SauceCodePro Nerd Font Mono 10
-    foreground_color = "#0acb60"
+    font = SpaceMono Nerd Font Mono Bold 10
+    foreground_color = "#00ffd7"
     show_titlebar = False
     scrollbar_position = hidden
     scroll_on_output = True
-    palette = "#000000:#cd0000:#00cd00:#cdcd00:#0000cd:#cd00cd:#00cdcd:#faebd7:#404040:#ff0000:#00ff00:#ffff00:#ce5c00:#ff00ff:#00ffff:#ffffff"
+    palette = "#000000:#cc0000:#4e9a06:#c4a000:#3465a4:#75507b:#06989a:#d3d7cf:#555753:#ef2929:#8ae234:#fce94f:#729fcf:#ad7fa8:#34e2e2:#eeeeec"
+    use_system_font = False
+  [[Material-Ocean]]
+    allow_bold = False
+    background_color = "#0f111a"
+    background_darkness = 1.0
+    background_type = transparent
+    cursor_color = "#ffcc00"
+    cursor_color_fg = False
+    font = SpaceMono Nerd Font Mono Bold 10
+    foreground_color = "#53b59d"
+    show_titlebar = False
+    scrollbar_position = hidden
+    scroll_on_output = True
+    palette = "#2e3436:#ff5370:#c3e88d:#ffcb6b:#82aaff:#c792ea:#89ddff:#d3d7cf:#555753:#f07178:#c3e88d:#f78c6c:#729fcf:#bb80b3:#89ddff:#eeeeec"
     use_system_font = False
 [layouts]
   [[default]]

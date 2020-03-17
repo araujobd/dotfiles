@@ -1,7 +1,10 @@
+#alias enable_turbo_boost="echo 0 | sudo tee /sys/devices/system/cpu/intel_pstate/no_turbo"
+#alias disable_turbo_boost="echo 1 | sudo tee /sys/devices/system/cpu/intel_pstate/no_turbo"
 alias start_docker="sudo systemctl start docker"
 alias stop_docker="sudo systemctl stop docker"
 alias reset_swap="sudo swapoff -a && sudo swapon -a"
-alias ls='ls --color --group-directories-first'
-alias ll='ls -l'
-alias lt='tree -L 1'
+#alias ls='ls --color --group-directories-first'
+alias ls='lsd'
+alias ll='lsd -l'
+alias lt='lsd --tree --depth 1'
 

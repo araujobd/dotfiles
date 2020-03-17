@@ -120,7 +120,7 @@ let g:rainbow_conf = {
 " Airline
 let g:airline#extensions#tabline#enabled=1
 let g:airline_powerline_fonts=1
-let g:airline_theme='wombat'
+let g:airline_theme='murmur'
 
 " NerdTree Configuration
 " Give a shortcut key to NERD Tree
@@ -136,8 +136,6 @@ let g:tagbar_autoclose=1
 " Molokai
 let g:molokai_original=1
 let g:rehash256=1
-
-""""""""""""""""""""""""""""""""""""""""
 "      End Plugins Configurations      "
 """"""""""""""""""""""""""""""""""""""""
 
@@ -170,6 +168,7 @@ set softtabstop=2
 set t_Co=256
 set undolevels=1000
 set visualbell
+set clipboard=unnamed
 
 set pastetoggle=<F12> " sane identation on pastes
 
