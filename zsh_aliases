@@ -7,4 +7,10 @@ alias reset_swap="sudo swapoff -a && sudo swapon -a"
 alias ls='lsd'
 alias ll='lsd -l'
 alias lt='lsd --tree --depth 1'
-
+alias ltd='lsd --tree --depth'
+alias notes='code ~/Documentos/Notes'
+alias enable_hdmi='xrandr --setprovideroutputsource NVIDIA-G0 modesetting'
+alias nvidiarun='__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia'
+alias studio='XMODIFIERS= /opt/android-studio/bin/studio.sh &'
+alias studio-canary='XMODIFIERS= /opt/android-studio-canary/bin/studio.sh &'
+alias idea='XMODIFIERS= /opt/idea/bin/idea.sh &'
