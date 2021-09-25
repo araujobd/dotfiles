@@ -1,5 +1,5 @@
-#alias enable_turbo_boost="echo 0 | sudo tee /sys/devices/system/cpu/intel_pstate/no_turbo"
-#alias disable_turbo_boost="echo 1 | sudo tee /sys/devices/system/cpu/intel_pstate/no_turbo"
+lias enable_turbo_boost="echo 0 | sudo tee /sys/devices/system/cpu/intel_pstate/no_turbo"
+alias disable_turbo_boost="echo 1 | sudo tee /sys/devices/system/cpu/intel_pstate/no_turbo"
 alias start_docker="sudo systemctl start docker"
 alias stop_docker="sudo systemctl stop docker"
 alias reset_swap="sudo swapoff -a && sudo swapon -a"
@@ -14,3 +14,4 @@ alias nvidiarun='__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia'
 alias studio='XMODIFIERS= /opt/android-studio/bin/studio.sh &'
 alias studio-canary='XMODIFIERS= /opt/android-studio-canary/bin/studio.sh &'
 alias idea='XMODIFIERS= /opt/idea/bin/idea.sh &'
+alias rmpycache='rm -rf `find . -name "__pycache__"`'
